@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 
+const API_URL = "http://localhost:5000/api"; // adapte selon ton backend
+
 export default function Welcome() {
   const [code, setCode] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+  const [codeSent, setCodeSent] = useState(false);
+  const [loginData, setLoginData] = useState({});
 
   const handleCodeVerify = async () => {
     setError("");
@@ -29,6 +35,8 @@ export default function Welcome() {
       <h2>Bienvenue</h2>
       <input type="text" value={code} onChange={e => setCode(e.target.value)} placeholder="Code de vérification" />
       <button onClick={handleCodeVerify}>Vérifier le code</button>
+      {error && <div style={{color:'red'}}>{error}</div>}
+      {success && <div style={{color:'green'}}>{success}</div>}
     </div>
   );
 }
