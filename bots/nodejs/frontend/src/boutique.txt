@@ -1,0 +1,2 @@
+# Relance du workflow et build Netlify pour la boutique
+Ce fichier déclenche un nouveau commit pour relancer le build et le workflow.
