@@ -1,0 +1,4 @@
+[build]
+base = "bots/nodejs/frontend"
+publish = "build"
+command = "npm install && npm run build"
