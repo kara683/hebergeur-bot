@@ -6,8 +6,7 @@ export default function Welcome() {
   const [code, setCode] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const [codeSent, setCodeSent] = useState(false);
-  const [loginData, setLoginData] = useState({});
+  // Supprime les hooks inutilisés pour éviter les warnings
 
   const handleCodeVerify = async () => {
     setError("");
@@ -16,12 +15,11 @@ export default function Welcome() {
       const res = await fetch(`${API_URL}/verify-code`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: loginData.email, code })
+        body: JSON.stringify({ code })
       });
       const data = await res.json();
       if (res.ok) {
         setSuccess("Code validé, accès autorisé.");
-        setCodeSent(false);
       } else {
         setError(data.message || "Code incorrect.");
       }
