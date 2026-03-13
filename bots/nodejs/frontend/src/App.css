@@ -1,0 +1,174 @@
+.welcome-bg {
+  min-height: 100vh;
+  background: #7a2323;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcome-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(122,35,35,0.15);
+  padding: 40px 32px;
+  min-width: 350px;
+  text-align: center;
+}
+.welcome-box h1 {
+  color: #7a2323;
+  margin-bottom: 30px;
+}
+.switch-auth {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.switch-auth button {
+  background: #eee;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  color: #7a2323;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.switch-auth button.active {
+  background: #7a2323;
+  color: #fff;
+}
+.form input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.form button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #7a2323;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.form button.subscribe-btn {
+  background: #7a2323;
+}
+.form button.login-btn {
+  background: #7a2323;
+}
+.plans {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.plan-card {
+  background: #fff;
+  color: #7a2323;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 30px 40px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border 0.2s;
+  border: 2px solid transparent;
+}
+.plan-card.selected {
+  border: 2px solid #7a2323;
+  box-shadow: 0 4px 16px rgba(122,35,35,0.15);
+}
+.plan-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+}
+.plan-card p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.options {
+  margin: 20px 0;
+}
+.option-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.total-price {
+  margin: 25px 0 10px 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+.pay-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.page-bg {
+  background: #7a2323;
+  min-height: 100vh;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-bg {
+  min-height: 100vh;
+  background: #7a2323;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.logo {
+  width: 220px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #eee;
+  font-size: 1.2rem;
+}
+
+.content {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+.subscribe-btn, .login-btn {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  background: #fff;
+  color: #7a2323;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.subscribe-btn:hover, .login-btn:hover {
+  background: #7a2323;
+  color: #fff;
+  border: 2px solid #fff;
+}
