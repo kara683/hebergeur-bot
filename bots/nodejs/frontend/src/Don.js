@@ -30,7 +30,7 @@ export default function Don() {
         }
       }).render('#paypal-button-container');
     }
-  }, [amount]);
+  }, [amount, createOrder]);
 
   const handleDonate = async () => {
     const stripe = await stripePromise;
