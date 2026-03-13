@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 const API_URL = "http://localhost:5000/api"; // adapte selon ton backend
 
@@ -6,7 +7,6 @@ export default function Welcome() {
   const [code, setCode] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  // Supprime les hooks inutilisés pour éviter les warnings
 
   const handleCodeVerify = async () => {
     setError("");
@@ -29,12 +29,14 @@ export default function Welcome() {
   };
 
   return (
-    <div>
-      <h2>Bienvenue</h2>
-      <input type="text" value={code} onChange={e => setCode(e.target.value)} placeholder="Code de vérification" />
-      <button onClick={handleCodeVerify}>Vérifier le code</button>
-      {error && <div style={{color:'red'}}>{error}</div>}
-      {success && <div style={{color:'green'}}>{success}</div>}
+    <div className="futur-bg">
+      <div className="glass-box">
+        <h2>Bienvenue</h2>
+        <input type="text" value={code} onChange={e => setCode(e.target.value)} placeholder="Code de vérification" />
+        <button className="futur-btn" onClick={handleCodeVerify}>Vérifier le code</button>
+        {error && <div className="error-msg">{error}</div>}
+        {success && <div className="success-msg">{success}</div>}
+      </div>
     </div>
   );
 }
