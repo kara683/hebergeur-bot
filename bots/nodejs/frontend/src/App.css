@@ -58,68 +58,95 @@ body, html {
   background: linear-gradient(90deg, #7209b7 0%, #3a0ca3 100%);
   transform: scale(1.05);
 }
-.glass-box {
-  background: rgba(255,255,255,0.12);
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(58,12,163,0.15);
-  padding: 40px 32px;
-  min-width: 350px;
-  text-align: center;
-  backdrop-filter: blur(8px);
-  margin-top: 40px;
-}
-.glass-box h2 {
-  color: #fff;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-.form input {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  font-size: 1rem;
-  background: rgba(255,255,255,0.18);
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(58,12,163,0.08);
-}
-.form input::placeholder {
-  color: #d1c4e9;
-}
-.form button {
-  width: 100%;
-  padding: 14px;
-  border-radius: 8px;
-  border: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #3a0ca3 0%, #7209b7 100%);
-  color: #fff;
-  cursor: pointer;
-  margin-top: 10px;
-  box-shadow: 0 2px 8px rgba(58,12,163,0.15);
-  transition: background 0.2s, transform 0.2s;
-}
-.form button:hover {
-  background: linear-gradient(90deg, #7209b7 0%, #3a0ca3 100%);
-  transform: scale(1.03);
-}
-.error-msg {
-  color: #ff5252;
-  margin-top: 10px;
-}
-.success-msg {
-  color: #00e676;
-  margin-top: 10px;
-}
-@media (max-width: 600px) {
-  .glass-header, .glass-box {
-    padding: 16px 8px;
-    min-width: 90vw;
-  }
-  .glass-content {
+/* styles glass-box supprimés */
+
+  .futur-bg {
+    min-height: 100vh;
+    display: flex;
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+
+  .futur-header {
+    margin-top: 40px;
+    padding: 32px 48px;
+    text-align: center;
   }
-}
+
+  .logo {
+    width: 60px;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 0 12px #00fff7);
+  }
+
+  .futur-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #00fff7, 0 0 16px #7209b7;
+  }
+  .futur-header p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    text-shadow: 0 0 6px #00fff7;
+  }
+
+  .futur-content {
+    display: flex;
+    gap: 20px;
+    margin: 40px 0 30px 0;
+    justify-content: center;
+  }
+
+  .futur-btn {
+    background: linear-gradient(90deg, #00fff7 0%, #7209b7 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 0 16px #00fff7, 0 0 32px #7209b7;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    text-shadow: 0 0 6px #00fff7;
+  }
+  .futur-btn:hover {
+    background: linear-gradient(90deg, #7209b7 0%, #00fff7 100%);
+    transform: scale(1.08);
+    box-shadow: 0 0 24px #00fff7, 0 0 48px #7209b7;
+  }
+
+  }
+  .futur-input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #00fff7;
+    font-size: 1rem;
+    background: rgba(0,255,247,0.12);
+    color: #fff;
+    box-shadow: 0 0 8px #00fff7;
+  }
+  .futur-input::placeholder {
+    color: #00fff7;
+    opacity: 0.7;
+  }
+  .error-msg {
+    color: #ff5252;
+    margin-top: 10px;
+    text-shadow: 0 0 6px #ff5252;
+  }
+  @media (max-width: 600px) {
+    .futur-header, .futur-box {
+      padding: 16px 8px;
+      min-width: 90vw;
+    }
+    .futur-content {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }

@@ -8,7 +8,7 @@ export default function Subscription() {
   const [email, setEmail] = useState('');
   const [amount, setAmount] = useState(1000);
   const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
+  // ...existing code...
 
   const handlePayment = async () => {
     const stripe = await stripePromise;
@@ -37,13 +37,12 @@ export default function Subscription() {
 
   return (
     <div className="futur-bg">
-      <div className="glass-box">
+      <div className="futur-box">
         <h2>Abonnement Stripe</h2>
-        <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
-        <input type="number" value={amount} onChange={e => setAmount(Number(e.target.value))} placeholder="Montant" />
+        <input className="futur-input" type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
+        <input className="futur-input" type="number" value={amount} onChange={e => setAmount(Number(e.target.value))} placeholder="Montant" />
         <button className="futur-btn" onClick={handlePayment}>Payer</button>
         {error && <div className="error-msg">{error}</div>}
-        {success && <div className="success-msg">{success}</div>}
       </div>
     </div>
   );
